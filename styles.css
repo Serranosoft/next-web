@@ -17,9 +17,9 @@ a {
 }
 
 .section-title {
+    margin-bottom: 20px;
     font-size: 26px;
     font-weight: 900;
-    margin-bottom: 20px;
 }
 
 .section-title a {
@@ -58,10 +58,9 @@ nav li {
 }
 
 nav li a {
-    display: inline-block;
     padding: 0 15px;
-    color: rgb(148, 146, 146);
     font-family: 'Ropa Sans', sans-serif;
+    color: rgb(148, 146, 146);
 }
 
 nav li a:hover {
@@ -69,12 +68,12 @@ nav li a:hover {
 }
 
 .menu-icon {
-    font-size: 24px;
     padding: 10px 20px;
     margin-left: auto;
-    cursor: pointer;
-    color: orangered;
     border-left: 1px solid lightgray;
+    font-size: 24px;
+    color: orangered;
+    cursor: pointer;
     display: none;
 }
 
@@ -89,12 +88,12 @@ nav li a:hover {
 }
 
 .nav-alert {
-    background-color:#fd3;
     padding: 10px;
+    background-color:#fd3;
 }
 .nav-alert p {
-    font-size: 12px;
     margin-left: 50px;
+    font-size: 12px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -108,28 +107,31 @@ nav li a:hover {
         padding: 20px;
     }
     .nav-alert p {
-        text-align:center;  
         margin-left: 0;
+        text-align:center;  
     }
 }
 
-/* BIG ARTICLES */
+/* HERO SECTION */
 
 .hero-articles {
     max-width: 100%;
     min-height: 600px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "main-art main-art art1"
     "main-art main-art art2";
     gap: 10px;
-    margin-top: 80px;
+    margin-top: 90px;
     margin-bottom: 80px;
+    margin-right: 8px;
+    margin-left: 8px;
     color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .hero-articles {
         grid-template-areas:
         "main-art main-art"
@@ -137,15 +139,15 @@ nav li a:hover {
         "art2 art2";
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr;
-        margin-top: 100px;
-        margin-right: 8px;
-        margin-left: 8px;
+        margin-top: 110px;
     }
 }
 
+/* MAIN ARTICLE */
+
 .main-art {
     grid-area: main-art;
-    background:url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/header-image-Apple-Silicon-Geekbench-results-796x417.png");
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/header-image-Apple-Silicon-Geekbench-results-796x417.png");
     background-size: cover;
 }
 
@@ -153,10 +155,9 @@ nav li a:hover {
     width: 100%;
     height: 100%;
     display: block;
-    background-size: 100% 100%;
 }
 .main-art a:hover{
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, .3);
 }
 
 .article-date {
@@ -182,9 +183,10 @@ nav li a:hover {
 }
 
 .main-art .article-info h2 {
+    padding-bottom: 20px;
     font-size: 52px;
     font-weight: bold;
-    padding-bottom: 20px;
+    
 }
 
 @media (max-width: 800px) { 
@@ -199,12 +201,13 @@ nav li a:hover {
     }
 }
 
+/* SIDE ARTICLES */
 
 .art1 {
     display: grid;
     padding: 15px;
     grid-area: art1;
-    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/header-image-Apple-Silicon-Geekbench-results-796x417.png");
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/1-18-796x417.jpg");
     background-size: cover;
 }
 
@@ -212,11 +215,12 @@ nav li a:hover {
     display: grid;
     padding: 15px;
     grid-area: art2;
-    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/header-image-Apple-Silicon-Geekbench-results-796x417.png");
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/Untitled-design-2020-11-18T111356.807-796x417.png");
     background-size: cover;
 }
 
 /* WRAPPER FOR THE REST OF CONTENT */
+
 .wrapper {
 
     max-width: 1220px;
@@ -239,11 +243,8 @@ nav li a:hover {
     margin-bottom: 50px;
 }
 
-
-
 .lt-art {
     cursor: pointer;
-    
 }
 
 .lt-art img {
@@ -255,15 +256,16 @@ nav li a:hover {
 }
 
 .lt-art p {
+    margin: 10px 0;
     font-weight: bold;
     font-size: 18px;
     line-height: 16px;
-    margin: 10px 0;
 }
 
 .lt-art p:hover {
     color: orangered;
 }
+
 @media (max-width: 1000px) {
     .lt-art-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -273,9 +275,7 @@ nav li a:hover {
     .lt-news {
         margin: 10px;
     }
-    .lt-art img {
-        width: 100%;
-    }
+
     .lt-art-grid {
         gap: 10px;
         grid-template-columns: 1fr;
@@ -287,15 +287,14 @@ nav li a:hover {
         grid-template-columns: 1fr 4fr;
     }
     .lt-art img {
-        width: 120px;
+        width: 130px;
         height: 60px;
     }
     .lt-art p {
-        font-weight: bold;
-        font-size: 14px;
         margin-top: 0;
         margin-left: 10px;
-        
+        font-weight: bold;
+        font-size: 14px;  
     }
 } 
 
@@ -317,10 +316,10 @@ nav li a:hover {
 
 .lt-funding-title {
     padding: 10px;
-    background: orangered;
-    color: white;
     font-weight: bold;
     text-align: center;
+    background: orangered;
+    color: white;
     cursor: pointer;
 }
 
@@ -372,7 +371,6 @@ nav li a:hover {
         margin: 10px;
     }
     .lt-funding-grid {
-        width: 100%;
         grid-template-columns: 1fr;
         margin-bottom: 50px;
     }
@@ -388,13 +386,13 @@ nav li a:hover {
 }
 
 .main-art-ctg {
-    display: flex;
     width: 100%;
     height: 250px;
-    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/buffetttt-368x276.jpg");
+    display: flex;
     flex-direction: column;
-    justify-content : end;
+    justify-content: end;
     padding: 20px;
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/buffetttt-368x276.jpg");
     cursor: pointer;
 }
 
@@ -412,11 +410,11 @@ nav li a:hover {
 
 .lts-art-ctg {
     height: 100px;
-    background-color: #fff4f2;
-    padding: 10px;
-    color: orangered;
-    font-size: 14px;
     margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #fff4f2;
+    color: orangered;
 }
 
 .lts-art-ctg .title {
@@ -427,8 +425,8 @@ nav li a:hover {
 .art-ctg p{
     padding: 10px;
     font-size: 13.5px;
-    color: rgb(133, 129, 129);
     font-weight: bold;
+    color: rgb(133, 129, 129);
     cursor: pointer;
 }
 .art-ctg p:hover{
